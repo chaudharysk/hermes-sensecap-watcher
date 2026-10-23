@@ -1,0 +1,5 @@
+user watcher
+topic read hermes/status
+topic read hermes/approval
+topic read hermes/diagnostic
+topic write hermes/watcher/ack

@@ -1,0 +1,19 @@
+Hermes Watcher
+
+An independent integration for SenseCAP Watcher and Hermes Agent.
+Not an official Seeed Studio or Nous Research product.
+
+Firmware integration patches modify Seeed Studio's SenseCAP Watcher firmware:
+https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware
+Upstream license: Apache License 2.0 (included as LICENSE).
+Modified areas: Hermes initialization, LVGL overlay, embedded sound assets,
+and idle-only audio playback support. See firmware/integration.patch.
+Additional integration source and documentation are distributed under Apache-2.0.
+
+Audio: Interface Sounds 1.0 by Kenney, CC0-1.0.
+https://kenney.nl/assets/interface-sounds
+See firmware/overlay/main/view/hermes_audio/LICENSE.txt for the original notice.
+The WAVs are converted, attenuated versions; permission/error cues repeat once.
+
+Dependencies fetched by ESP-IDF or Git retain their own licenses and notices.
+The complete upstream firmware and its dependency history are not redistributed here.

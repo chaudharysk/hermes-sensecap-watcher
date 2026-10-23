@@ -1,0 +1,42 @@
+{
+  "source": "https://kenney.nl/assets/interface-sounds",
+  "archive_sha256": "f2193d072726d6758a5f7871b2dcc54dcce0d5c35c6f0a62f92549b327c81232",
+  "license": "CC0-1.0",
+  "sounds": {
+    "start": {
+      "original": "open_002.ogg",
+      "seconds": 0.3138125,
+      "sha256": "38a76af02556aaff4801b6b262fd41cc8c7ea33712acc2d318ec4d4018d339e3"
+    },
+    "search": {
+      "original": "select_002.ogg",
+      "seconds": 0.040375,
+      "sha256": "aec0a9e7a5780fd16df04c08aa872471f7a59ad34c8ff8588043a02353571191"
+    },
+    "done": {
+      "original": "confirmation_002.ogg",
+      "seconds": 0.539,
+      "sha256": "e06bd200e74b01c215ac415b87b7ce50e5511411bfab9d1546481b61fffddfb6"
+    },
+    "error": {
+      "original": "error_004.ogg",
+      "seconds": 0.299,
+      "sha256": "8d390036e22dac72b754195a61085dd18b5d32b90e718a1b00bec0fb30bf8286"
+    },
+    "approval": {
+      "original": "question_002.ogg",
+      "seconds": 0.755,
+      "sha256": "139fd4c5e0a6b1951b74ce6da4d282ad1bd13ed677dd8e27689322501d5631bf"
+    },
+    "choice": {
+      "original": "question_004.ogg",
+      "seconds": 0.3325,
+      "sha256": "f3dcd0e0d6bf208e637700cc51f6459c233e9efce5ef33a24bc6ff5a409009e0"
+    },
+    "offline": {
+      "original": "close_002.ogg",
+      "seconds": 0.3138125,
+      "sha256": "2bb7e439e8826c7d107d96481722861bb0090672ce8a18704357b6b88bfbd295"
+    }
+  }
+}

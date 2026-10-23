@@ -1,0 +1,16 @@
+services:
+  broker:
+    image: eclipse-mosquitto:2
+    container_name: hermes-mqtt
+    restart: unless-stopped
+    ports:
+      # Publish only the authenticated listener, bound to your chosen LAN IP.
+      - "${WATCHER_LAN_IP:?Set WATCHER_LAN_IP in your private .env}:1883:1884"
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - ./watcher.acl:/mosquitto/config/watcher.acl:ro
+      - broker_secrets:/mosquitto/secrets
+      - broker_data:/mosquitto/data
+volumes:
+  broker_secrets:
+  broker_data:

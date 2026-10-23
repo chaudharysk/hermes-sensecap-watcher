@@ -1,0 +1,250 @@
+{
+  "format": 1,
+  "scope": "Reviewed source-only export; no device data or original Git history.",
+  "files": {
+    ".gitattributes": {
+      "sha256": "482d540b3a9da14f0aa933c5f2f36010fcd9b4299848aaafd1e57c757e7eb3a7",
+      "bytes": 65
+    },
+    ".github/workflows/checks.yml": {
+      "sha256": "14ae3dbdc87e790a6cf49b3d7d24b550e07f41e2a2cb12f635a608d94927c890",
+      "bytes": 424
+    },
+    ".gitignore": {
+      "sha256": "ceff7fc97ed1362d197ca82634f5fba5e17679cf107481634543eb850f5a64fe",
+      "bytes": 398
+    },
+    "broker/.env.example": {
+      "sha256": "8d20ffc33e83504a1702d1c8d675ad583489ab53b1fdf5e67de5ce91660b54d7",
+      "bytes": 101
+    },
+    "broker/compose.yaml": {
+      "sha256": "4e6029b87f189232878cac78b31e90c4f023419238d2393bb932373bd3101c3d",
+      "bytes": 528
+    },
+    "broker/mosquitto.conf": {
+      "sha256": "ab0cc29d020de2a4028606d47bee8c6f52d0fecee5286d24c8adb3759569c55e",
+      "bytes": 477
+    },
+    "broker/README.md": {
+      "sha256": "a92c7d5eff3e6e9a9cd453ea4c4fb1f00ead73dd1cc513914ac3962e0e1c08c4",
+      "bytes": 1009
+    },
+    "broker/watcher.acl": {
+      "sha256": "130833bbce0e3bbc085bfe1facc0acdf25aead5a0bf26c59195783007a61c9c7",
+      "bytes": 125
+    },
+    "CONTRIBUTING.md": {
+      "sha256": "23c620204942eeb1da97f48c6b71056f4c9d80e6756bf28c2fd67ca72033f7a4",
+      "bytes": 1167
+    },
+    "docs/PRIVACY.md": {
+      "sha256": "dc2f0995a0ae53959358bd1f833bcafc441513374b3671ce50dbbce7af56b5ad",
+      "bytes": 2633
+    },
+    "docs/PROTOCOL.md": {
+      "sha256": "ff7f62eca136237283581a2c12d4b320405f19de04d5c0a4bed2225dda4af23d",
+      "bytes": 4032
+    },
+    "docs/PUBLISHING.md": {
+      "sha256": "c7238b150059ba799e4c3963ad2bec679993561fdb66bb7dbd82bbb04b2436c7",
+      "bytes": 2855
+    },
+    "docs/TROUBLESHOOTING.md": {
+      "sha256": "26ac2a32ebff73dcfa3dc02db8047878b630ecfef6685aa8e98ee29921f3dbe6",
+      "bytes": 4140
+    },
+    "docs/TUTORIAL.md": {
+      "sha256": "e7e99161e22c4c7cc4bdbbe58bf6692c9f3c27598186e1d6fb8f9bbb22ab64b8",
+      "bytes": 10269
+    },
+    "docs/VALIDATION.md": {
+      "sha256": "217b04cdd61e29b2263bd2ab3aac14f01ac2ae969594027cc380c77952948470",
+      "bytes": 2795
+    },
+    "firmware/integration.patch": {
+      "sha256": "c80044b038aca0ecbefc6e3b0140ed07f98f05f0d90a63142888c0f031fc1ddd",
+      "bytes": 4732
+    },
+    "firmware/overlay/main/app/app_hermes.c": {
+      "sha256": "89040cfb55ca564210d103d638252cfc061b0cf7d6d5ce4e153ac256193d96d0",
+      "bytes": 10705
+    },
+    "firmware/overlay/main/app/app_hermes.h": {
+      "sha256": "64692ac261c64fc7aeecaf066549ce16ac399b0a5129a475789fcb4dffed5603",
+      "bytes": 147
+    },
+    "firmware/overlay/main/app/app_hermes_sound.c": {
+      "sha256": "df7ddedef954fdc8a6b5dec2bd0afb0bf3ac0087512cdcc2fa7b95a5fd44b524",
+      "bytes": 2827
+    },
+    "firmware/overlay/main/app/app_hermes_sound.h": {
+      "sha256": "e310eb417543748ec8b659704bf50ef54ab0c0ba8de57c2cf5378d5df3afda6e",
+      "bytes": 387
+    },
+    "firmware/overlay/main/app/hermes_config.example.h": {
+      "sha256": "a9b4a2101bbf4d49a83ce9c15b8afb04b4d100867e1cd2b6f0d10b8005de3155",
+      "bytes": 474
+    },
+    "firmware/overlay/main/view/hermes_audio/close_002.ogg": {
+      "sha256": "bc4279d2bb2bf86592473eab6a8eab55e51b54a8619315000dbd780a83b102d8",
+      "bytes": 14752
+    },
+    "firmware/overlay/main/view/hermes_audio/confirmation_002.ogg": {
+      "sha256": "33b17a9a9a2397c62b285c52c33a907fdffb476909c99e42dde603f6a7a8b12c",
+      "bytes": 14169
+    },
+    "firmware/overlay/main/view/hermes_audio/error_004.ogg": {
+      "sha256": "0b574cea597d96507e782ae9764f88482ce49f46e931e57054bf7150047f2d69",
+      "bytes": 6393
+    },
+    "firmware/overlay/main/view/hermes_audio/hermes_approval.wav": {
+      "sha256": "139fd4c5e0a6b1951b74ce6da4d282ad1bd13ed677dd8e27689322501d5631bf",
+      "bytes": 24204
+    },
+    "firmware/overlay/main/view/hermes_audio/hermes_choice.wav": {
+      "sha256": "f3dcd0e0d6bf208e637700cc51f6459c233e9efce5ef33a24bc6ff5a409009e0",
+      "bytes": 10684
+    },
+    "firmware/overlay/main/view/hermes_audio/hermes_done.wav": {
+      "sha256": "e06bd200e74b01c215ac415b87b7ce50e5511411bfab9d1546481b61fffddfb6",
+      "bytes": 17292
+    },
+    "firmware/overlay/main/view/hermes_audio/hermes_error.wav": {
+      "sha256": "8d390036e22dac72b754195a61085dd18b5d32b90e718a1b00bec0fb30bf8286",
+      "bytes": 9612
+    },
+    "firmware/overlay/main/view/hermes_audio/hermes_offline.wav": {
+      "sha256": "2bb7e439e8826c7d107d96481722861bb0090672ce8a18704357b6b88bfbd295",
+      "bytes": 10086
+    },
+    "firmware/overlay/main/view/hermes_audio/hermes_search.wav": {
+      "sha256": "aec0a9e7a5780fd16df04c08aa872471f7a59ad34c8ff8588043a02353571191",
+      "bytes": 1336
+    },
+    "firmware/overlay/main/view/hermes_audio/hermes_start.wav": {
+      "sha256": "38a76af02556aaff4801b6b262fd41cc8c7ea33712acc2d318ec4d4018d339e3",
+      "bytes": 10086
+    },
+    "firmware/overlay/main/view/hermes_audio/LICENSE.txt": {
+      "sha256": "f7e58f21a053c54110a27e7da3510d73e50640a0dc85328afe077fc36191702f",
+      "bytes": 553
+    },
+    "firmware/overlay/main/view/hermes_audio/manifest.json": {
+      "sha256": "9368c015fe8dd1df60f30be818a66d547ef7bfcae8f0029a96e8959980342302",
+      "bytes": 1369
+    },
+    "firmware/overlay/main/view/hermes_audio/open_002.ogg": {
+      "sha256": "24ff224fe2c09c6aed1b41249825382dc74cf324b887ff279d8494912ce2beee",
+      "bytes": 14975
+    },
+    "firmware/overlay/main/view/hermes_audio/question_002.ogg": {
+      "sha256": "46056f10c70dda860e93bd27b66f4d33c0b7154eff28def06471b50028efa5b3",
+      "bytes": 9455
+    },
+    "firmware/overlay/main/view/hermes_audio/question_004.ogg": {
+      "sha256": "585ecb58b529dc49b5c5ce5ba93427bf73b7052bae55e49c43ba8f169c93ac99",
+      "bytes": 9821
+    },
+    "firmware/overlay/main/view/hermes_audio/README.md": {
+      "sha256": "851529395b2c9723e73b91a09a81b24b7c54e7078b8047e859fb2c628b52fd22",
+      "bytes": 902
+    },
+    "firmware/overlay/main/view/hermes_audio/select_002.ogg": {
+      "sha256": "4cc6ac5341b9b2c86fef80c347de028e9ab9f2e037586ac7d9fa59a403a1c012",
+      "bytes": 5463
+    },
+    "firmware/overlay/main/view/view_hermes.c": {
+      "sha256": "1002ad56c5eb4cadf72ff6811d9d99b3e39768361a8f35d5c3350d64734a5bb6",
+      "bytes": 29487
+    },
+    "firmware/overlay/main/view/view_hermes.h": {
+      "sha256": "5c1eadacd3ce7e4e0a5522710546ed484043dbfab026917ec0b366e3348e3759",
+      "bytes": 1115
+    },
+    "firmware/upstream.json": {
+      "sha256": "90b72e5a28e69189259b3d91e9ec1999028eadb0a7405b9d13f923f1a61a2e0d",
+      "bytes": 211
+    },
+    "laptop/diagnose.py": {
+      "sha256": "d67d92b61e9e5dab2b37edd3e2efae6da58e58731fa359d3ae9b9a32d9c3e23a",
+      "bytes": 7188
+    },
+    "laptop/health_bridge.sh": {
+      "sha256": "73eeb6aef409522c2daeecfcbffa330a36a7b61d8d6de161143bda911629f399",
+      "bytes": 593
+    },
+    "laptop/install.sh": {
+      "sha256": "f75e7ae97caf1ca3caa94c3079218fdc1e87951d74a2866a7fc1094febc6317b",
+      "bytes": 1848
+    },
+    "laptop/install_status.sh": {
+      "sha256": "1ceae79161b2d382f502b58d309498170209374db8f1014067a66e1f1bb747be",
+      "bytes": 682
+    },
+    "laptop/README.md": {
+      "sha256": "f5120d8a6040d1171c9615db70a9e3af4907977e69b22dacb12813dc70e0a260",
+      "bytes": 1263
+    },
+    "laptop/tests/test_diagnose.py": {
+      "sha256": "c592baab39489f5c5662c86af6ff688793f55de1fff7bba66956153a6c59b4ca",
+      "bytes": 1537
+    },
+    "laptop/tests/test_watcher_approval.py": {
+      "sha256": "e74ca3c1c9cf2389a09b3f0b91535e78a5bfdd28d77a0e60873ccc89675d4a91",
+      "bytes": 18790
+    },
+    "laptop/watcher-approval/__init__.py": {
+      "sha256": "8bdfad42106080de995d1e33168e7895ae48e23fb3094977c62944e29137af94",
+      "bytes": 12857
+    },
+    "laptop/watcher-approval/plugin.yaml": {
+      "sha256": "42a133c0446b341786bb65547bdd332d3889e43794b8a53c14bdc8ed68ae0ca2",
+      "bytes": 141
+    },
+    "laptop/watcher-status/handler.py": {
+      "sha256": "43c9ea67f98ed6e074dd7a4f8f0ec13d0d456d94ff2fdef0e27f19fd6fc3de8a",
+      "bytes": 2014
+    },
+    "laptop/watcher-status/HOOK.yaml": {
+      "sha256": "acb20ad3ea2a0839f169cb9d45c19fca63772a1800633e5c0f8d0c2ca0a75e18",
+      "bytes": 167
+    },
+    "LICENSE": {
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    "NOTICE": {
+      "sha256": "d98ef25e04dbed19dd70ca5174716d6d222af8a2d30982129c935ee613469f32",
+      "bytes": 979
+    },
+    "README.md": {
+      "sha256": "6141959579dc64d11019507703460b656dd432c3f513e6baed9c8fff03c9245d",
+      "bytes": 4581
+    },
+    "tests/test_release.py": {
+      "sha256": "eecca65445dc44c2a4ded2837a62845f76588887f5f84a6b5ad1e833d39ba5cc",
+      "bytes": 1856
+    },
+    "tests/test_status_hook.py": {
+      "sha256": "b2b5ebe5b45c9c5cf6a1b6d02939442f3752308479d2b7564e8f66343bdaf1fa",
+      "bytes": 1779
+    },
+    "tools/apply_firmware.py": {
+      "sha256": "bd685ef23bb9a8c73ec8ea7c871950dc731f3a21869303c265865abd19e6edbb",
+      "bytes": 3226
+    },
+    "tools/check_release.py": {
+      "sha256": "6df93fa47d1806aab7b067fea6e3e0690162b6f6498e26f6ecf564d4b099a4b5",
+      "bytes": 3112
+    },
+    "tools/package_release.py": {
+      "sha256": "c2e2f057da9c0b2d2da93cecd14b619e3fa56e11185b8f412dc50c7f1338261e",
+      "bytes": 1584
+    },
+    "tools/prepare_audio.py": {
+      "sha256": "a304f0203a8a12393232480d1bd0c8ea6ab475044799e476d005bfeb2025d2d2",
+      "bytes": 1157
+    }
+  }
+}

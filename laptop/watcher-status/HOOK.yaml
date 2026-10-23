@@ -1,0 +1,7 @@
+name: watcher-status
+description: Send generic Hermes gateway activity states to the Watcher.
+events:
+  - gateway:startup
+  - agent:start
+  - agent:step
+  - agent:end

@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware.git",
+  "commit": "8e37f7ccd3d836bb99f483e0f6e74e8252406644",
+  "project": "examples/factory_firmware",
+  "idf_reference": "v5.2.1"
+}

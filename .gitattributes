@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.wav binary
+*.ogg binary
+*.patch text eol=lf

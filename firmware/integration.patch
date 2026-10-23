@@ -1,0 +1,138 @@
+--- a/examples/factory_firmware/main/CMakeLists.txt
++++ b/examples/factory_firmware/main/CMakeLists.txt
+@@ -19,6 +19,14 @@
+ 
+ 
+ idf_component_register(
++    EMBED_FILES
++        "view/hermes_audio/hermes_start.wav"
++        "view/hermes_audio/hermes_search.wav"
++        "view/hermes_audio/hermes_done.wav"
++        "view/hermes_audio/hermes_error.wav"
++        "view/hermes_audio/hermes_approval.wav"
++        "view/hermes_audio/hermes_choice.wav"
++        "view/hermes_audio/hermes_offline.wav"
+     SRCS
+         "main.c"
+         ${APP_SRCS}
+--- a/examples/factory_firmware/main/main.c
++++ b/examples/factory_firmware/main/main.c
+@@ -21,6 +21,7 @@
+ #include "app_wifi.h"
+ #include "app_ble.h"
+ #include "app_time.h"
++#include "app_hermes.h"
+ #include "app_cmd.h"
+ #include "at_cmd.h"
+ #include "app_sensecraft.h"
+@@ -176,6 +177,7 @@
+     app_taskflow_init();
+     app_voice_interaction_init();
+     app_wifi_init();
++    app_hermes_init();
+     app_time_init();
+     app_at_cmd_init();
+     app_ble_init();
+--- a/examples/factory_firmware/main/view/view.c
++++ b/examples/factory_firmware/main/view/view.c
+@@ -1,4 +1,6 @@
++#include <string.h>
+ #include "view.h"
++#include "view_hermes.h"
+ #include "view_image_preview.h"
+ #include "view_alarm.h"
+ #include "view_pages.h"
+@@ -944,6 +946,9 @@
+ 
+     lvgl_port_lock(0);
+     ui_init();
++
++    view_hermes_init();
++
+     lv_pm_init();
+     view_alarm_init(lv_layer_top());
+     view_image_preview_init(ui_Page_ViewLive);
+--- a/examples/factory_firmware/main/app/app_audio_player.c
++++ b/examples/factory_firmware/main/app/app_audio_player.c
+@@ -757,14 +757,16 @@
+     storage_file_open(p_filepath, &fp);
+     // fp = fopen(p_filepath, "r");
+     if( fp ) {
++        __data_lock(p_audio_player);
+         esp_err_t status  = audio_player_play(fp);
+         if( status == ESP_OK ) {
+-            __data_lock(p_audio_player);
+             p_audio_player->status = AUDIO_PLAYER_STATUS_PLAYING_FILE;
+             __data_unlock(p_audio_player);
+             ESP_LOGI(TAG, "play file %s", p_filepath);
+             return ESP_OK;
+         }
++        __data_unlock(p_audio_player);
++        fclose(fp);
+     } else {
+         ESP_LOGE(TAG, "open file %s fail", p_filepath);
+     }
+@@ -802,9 +804,9 @@
+     FILE *fp = NULL;
+     fp = fmemopen((void *)p_buf, len, "rb");
+     if( fp ) {
++        __data_lock(p_audio_player);
+         esp_err_t status  = audio_player_play(fp);
+         if( status == ESP_OK ) {
+-            __data_lock(p_audio_player);
+             p_audio_player->status = AUDIO_PLAYER_STATUS_PLAYING_MEM;
+             p_audio_player->mem_need_free = is_need_free;
+             p_audio_player->p_mem_buf = p_buf;
+@@ -812,10 +814,34 @@
+             ESP_LOGI(TAG, "play mem: %d", len);
+             return ESP_OK;
+         }
++        __data_unlock(p_audio_player);
++        fclose(fp);
+     } else {
+         ESP_LOGE(TAG, "open mem fail");
+     }
+     return ESP_FAIL;
++}
++
++esp_err_t app_audio_player_mem_if_idle(const uint8_t *p_buf, size_t len)
++{
++    struct app_audio_player *player = gp_audio_player;
++    if (player == NULL || p_buf == NULL || len == 0) return ESP_ERR_INVALID_STATE;
++    FILE *fp = fmemopen((void *)p_buf, len, "rb");
++    if (fp == NULL) return ESP_ERR_NO_MEM;
++    /* Serialize the final idle check with file/memory enqueue operations. */
++    __data_lock(player);
++    esp_err_t result = ESP_ERR_INVALID_STATE;
++    if (player->status == AUDIO_PLAYER_STATUS_IDLE && audio_player_get_state() == AUDIO_PLAYER_STATE_IDLE) {
++        result = audio_player_play(fp);
++        if (result == ESP_OK) {
++            player->status = AUDIO_PLAYER_STATUS_PLAYING_MEM;
++            player->mem_need_free = false;
++            player->p_mem_buf = (void *)p_buf;
++        }
++    }
++    __data_unlock(player);
++    if (result != ESP_OK) fclose(fp);
++    return result;
+ }
+ 
+ esp_err_t app_audio_player_mem_block(uint8_t *p_buf, size_t len, bool is_need_free, TickType_t xTicksToWait)
+--- a/examples/factory_firmware/main/app/app_audio_player.h
++++ b/examples/factory_firmware/main/app/app_audio_player.h
+@@ -151,4 +151,6 @@
+ esp_err_t app_audio_player_file_block(void *p_filepath, TickType_t xTicksToWait);
+ 
+ esp_err_t app_audio_player_mem(uint8_t *p_buf, size_t len, bool is_need_free);
++/* Optional UI cue: refuses busy playback. Buffer must remain valid until done. */
++esp_err_t app_audio_player_mem_if_idle(const uint8_t *p_buf, size_t len);
+ esp_err_t app_audio_player_mem_block(uint8_t *p_buf, size_t len, bool is_need_free, TickType_t xTicksToWait);
+--- a/.gitignore
++++ b/.gitignore
+@@ -87,3 +87,6 @@
+ 
+ # managed_components for examples
+ managed_components
++
++# Private local Hermes broker settings
++examples/factory_firmware/main/app/hermes_config.h
