@@ -393,6 +393,10 @@ firmware problem. See [troubleshooting](TROUBLESHOOTING.md) for each result.
 
 ## 8. Everyday use and optional offline detection
 
+The [display guide](DISPLAY_GUIDE.md) explains each expression and the design
+decisions from the original build: a round translucent face, quiet idle smile,
+sleeping offline state, readable task cards, and persistent requests for attention.
+
 Keep the broker and Hermes gateway running. After initial USB installation the
 Watcher receives updates over Wi-Fi; USB is only needed for power or later
 firmware changes. Normal touch controls remain available under the translucent
@@ -418,6 +422,7 @@ provides one. This optional command runs until Ctrl+C; it does not install a ser
 
 ## Help and customization
 
+- [Display behavior](DISPLAY_GUIDE.md): expressions, sounds, native Watcher use, and alert semantics.
 - [Troubleshooting](TROUBLESHOOTING.md): missing alerts, Docker, audio, and native camera errors.
 - [MQTT protocol](PROTOCOL.md): connect your own sender or another interface.
 - [Privacy](PRIVACY.md): keep private configuration, backups, and build outputs off GitHub.

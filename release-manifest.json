@@ -51,12 +51,12 @@
       "bytes": 2911
     },
     "docs/TROUBLESHOOTING.md": {
-      "sha256": "40887134e4bdfe73f168f0ea7bf7bf769b518c1d7ebae5b42b6b2277a214f089",
-      "bytes": 4146
+      "sha256": "d59c63910ba644ee740d99c77db2728730ff9ead3d0b30f8b02c4d95edc78f4d",
+      "bytes": 5445
     },
     "docs/TUTORIAL.md": {
-      "sha256": "775764baf6f625de2d998cee9254559b04e2ac73ea76e2d21e1fcd5251edd9c9",
-      "bytes": 17930
+      "sha256": "ba5770ab5172fe8d05c25d184746382a0920c79fa583bcb4be167ce555b843ce",
+      "bytes": 18274
     },
     "docs/VALIDATION.md": {
       "sha256": "df4155013b3ecb6856ca84f0495e6aba097b82b86ebe3d0454d86ee2785de34b",
@@ -219,8 +219,8 @@
       "bytes": 979
     },
     "README.md": {
-      "sha256": "4ba2ac118a1dd3c3c4688a68d90304cc9094ab65628e482c2e0012cfc95f7f99",
-      "bytes": 6608
+      "sha256": "eff7ae89d862689a2b87d4eca23f83ea6da251580a638bf7b17ef77d52866e4b",
+      "bytes": 7400
     },
     "tests/test_release.py": {
       "sha256": "eecca65445dc44c2a4ded2837a62845f76588887f5f84a6b5ad1e833d39ba5cc",
@@ -253,6 +253,10 @@
     "docs/images/watcher-working.jpg": {
       "sha256": "8a4c3bb28662581ca88107cd9cf0e8776e01ab12a2d194b7a93d161e502504a9",
       "bytes": 852776
+    },
+    "docs/DISPLAY_GUIDE.md": {
+      "sha256": "febd292e37dfb86569e0fe88eed19609c1845dc1639b72817d8d807e59503089",
+      "bytes": 7618
     }
   }
 }

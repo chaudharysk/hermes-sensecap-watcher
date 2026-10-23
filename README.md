@@ -29,6 +29,21 @@ visible beneath the translucent Hermes face and task card.*
 This repository contains an integration patch and selected source files, not a
 complete device image. Your own Watcher's factory data stays on your device.
 
+## Why this was built
+
+The idea was to see what Hermes was doing without repeatedly checking a chat
+window, and to notice when it needed a human answer. The Watcher becomes a small
+animated desk companion while Hermes continues running on the computer.
+
+The original design requests shaped the display: a circular face, smaller white
+eyes, a smile at rest, a sleeping expression when offline, and translucent face
+and text backgrounds so the normal Watcher interface remains visible. Idle mode
+does not spend screen space on a large `HERMES ONLINE` label. Colors, movement,
+and short sounds communicate changes and requests for attention.
+
+See [display behavior and design decisions](docs/DISPLAY_GUIDE.md) for the
+expressions, alert behavior, and practical lessons from the original build.
+
 ## What it does
 
 - Circular face with gentle movement, blinking, and state-dependent expressions.
