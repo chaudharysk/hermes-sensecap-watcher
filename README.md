@@ -1,7 +1,11 @@
 # Hermes Watcher
 
-A small physical companion for [Hermes Agent](https://github.com/NousResearch/hermes-agent),
-running on the [SenseCAP Watcher](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware).
+A physical status display for [Hermes Agent](https://github.com/NousResearch/hermes-agent),
+using the [SenseCAP Watcher](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware).
+
+**Hermes runs on your computer. The Watcher shows what Hermes is doing.**
+It receives status and alert messages over MQTT; it does not run the agent or
+its AI model.
 
 The Watcher shows a translucent animated face while Hermes works, plays short
 sound cues, and draws attention to permission requests and questions. Use it
@@ -9,7 +13,7 @@ with your Hermes messaging platform: Telegram, Discord, Slack, WhatsApp, or
 another supported gateway channel. Answer in the chat or terminal where Hermes
 asked; the Watcher only displays the alert.
 
-**[Install it on your SenseCAP Watcher →](docs/TUTORIAL.md)**
+**[Set up your Watcher as a Hermes status display →](docs/TUTORIAL.md)**
 
 The guide walks through the laptop setup, firmware build, USB installation,
 and a first display test. It includes Linux and Windows firmware instructions.

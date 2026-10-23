@@ -1,7 +1,11 @@
-# Install Hermes Watcher on your SenseCAP Watcher
+# Use SenseCAP Watcher as a Hermes Status Display
 
-This guide adds an animated Hermes face, task updates, short sounds, and
-permission/question alerts to a working SenseCAP Watcher.
+**Hermes runs on your computer. The Watcher shows what Hermes is doing.**
+
+This guide installs a status-display integration on your SenseCAP Watcher.
+It receives messages from Hermes and shows an animated face, task updates,
+short sounds, and permission/question alerts. It does not install Hermes or
+an AI model on the Watcher.
 
 **It works through Hermes events, not a Telegram connection.** Use your preferred
 supported Hermes gateway channel. Answer requests in the same chat or terminal

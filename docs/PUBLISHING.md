@@ -11,7 +11,7 @@ The instructions below also apply when publishing your own reviewed fork.
 
 Suggested description:
 
-> Animated Hermes Agent companion for SenseCAP Watcher, with MQTT task states,
+> SenseCAP Watcher status display for Hermes running on your computer, with MQTT task states,
 > permission and question alerts across supported Hermes interfaces, short sound cues,
 > and a setup tutorial.
 
