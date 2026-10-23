@@ -11,7 +11,7 @@ hermes plugins list --plain --no-bundled
 
 If `watcher-approval` is missing, run `bash laptop/install.sh` from this repository.
 If disabled, enable it. Then restart the gateway after active work finishes.
-Use the same account and `HERMES_HOME` as the Telegram gateway. Merely copying
+Use the same account and `HERMES_HOME` as your Hermes gateway or CLI. Merely copying
 or running `diagnose.py` does not install a plugin.
 
 Run the diagnostic while triggering a new genuine prompt:

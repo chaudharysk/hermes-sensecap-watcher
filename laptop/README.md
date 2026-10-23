@@ -1,7 +1,7 @@
 # Laptop components
 
 Start with the [complete tutorial](../docs/TUTORIAL.md). Run these installers in
-the same Linux account/profile as the Hermes Telegram gateway:
+the same Linux account/profile as your Hermes gateway or CLI:
 
 ```bash
 bash laptop/install.sh

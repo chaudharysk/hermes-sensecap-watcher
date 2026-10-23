@@ -11,11 +11,16 @@ network setting elsewhere in the original tree was excluded with that entire fil
 - Firmware binaries, flash dumps, partition backups, and model/storage images.
 - Personal `sdkconfig`, connection settings, Wi-Fi credentials, local IP addresses.
 - Telegram tokens/chat identifiers, model API keys, Hermes profiles and history.
-- Logs, screenshots/photos, recordings, editor configuration, and local Git history.
+- Logs, unreviewed screenshots/photos, recordings, editor configuration, and local Git history.
 - The existing laptop/package archives; this release ZIP is made from reviewed files only.
 
-No personal photos or screenshots were used as release artwork. The included
-audio files are selected public CC0 assets with provenance and checksums.
+The owner supplied two device photos for the README/tutorial, published as
+`docs/images/watcher-working.jpg` and `docs/images/watcher-done.jpg`. These were
+visually reviewed, and EXIF/XMP/IPTC/comment metadata was removed without changing
+the encoded image. Original camera files are not published. The release checker
+allows only those two reviewed photo paths and verifies their manifest hashes;
+it does not inspect image pixels or automatically remove metadata from new photos.
+The included audio files are selected public CC0 assets with provenance and checksums.
 
 ## Keep your configuration private
 

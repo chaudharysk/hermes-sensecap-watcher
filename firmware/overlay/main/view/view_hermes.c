@@ -41,7 +41,7 @@ static const expression_t expressions[EMOTION_COUNT] = {
     [SPEAKING]  = {"SPEAKING", "Here's what I found", 0xD4A3FF, 18, 7},
     [SLEEPING]  = {"RESTING", "Taking a quiet moment", 0xA0A7CB, 3, 3},
     [WAITING]   = {"WAITING", "Waiting for the next step", 0xE8C58B, 14, 2},
-    [APPROVAL]  = {"APPROVAL NEEDED", "Review the request in Telegram", 0xFFD28C, 21, 2},
+    [APPROVAL]  = {"APPROVAL NEEDED", "Review the request in Hermes", 0xFFD28C, 21, 2},
 };
 
 static lv_obj_t *orb;
@@ -391,7 +391,7 @@ static void update_hint(void)
     else if (approval_pending && approval_qr != NULL &&
              !lv_obj_has_flag(approval_qr, LV_OBJ_FLAG_HIDDEN)) hint = "Scan to review on your phone";
 #endif
-    else if (approval_pending && input_pending) hint = "Choose an option in Telegram";
+    else if (approval_pending && input_pending) hint = "Choose an option in Hermes";
     lv_label_set_text(hint_label, hint);
 }
 

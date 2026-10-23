@@ -4,8 +4,23 @@ A small physical companion for [Hermes Agent](https://github.com/NousResearch/he
 running on the [SenseCAP Watcher](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware).
 
 The Watcher shows a translucent animated face while Hermes works, plays short
-sound cues, and draws attention to permission requests and questions. Answer
-the original request in Telegram; the Watcher does not approve commands itself.
+sound cues, and draws attention to permission requests and questions. Use it
+with your Hermes messaging platform: Telegram, Discord, Slack, WhatsApp, or
+another supported gateway channel. Answer in the chat or terminal where Hermes
+asked; the Watcher only displays the alert.
+
+**[Install it on your SenseCAP Watcher →](docs/TUTORIAL.md)**
+
+The guide walks through the laptop setup, firmware build, USB installation,
+and a first display test. It includes Linux and Windows firmware instructions.
+
+<p align="center">
+  <img src="docs/images/watcher-working.jpg" width="300" alt="Hermes working face on a SenseCAP Watcher">
+  <img src="docs/images/watcher-done.jpg" width="300" alt="Hermes smiling DONE face on a SenseCAP Watcher">
+</p>
+
+*Photos of the owner's working device. The native Watcher interface remains
+visible beneath the translucent Hermes face and task card.*
 
 This repository contains an integration patch and selected source files, not a
 complete device image. Your own Watcher's factory data stays on your device.
@@ -16,13 +31,13 @@ complete device image. Your own Watcher's factory data stays on your device.
 - Quiet smiling idle state; closed eyes and a drifting Z when offline.
 - Different colors for thinking, searching, working, success, and errors.
 - Translucent, non-clickable overlay that leaves native touch controls available.
-- Persistent amber alerts for permissions and Telegram choice questions.
+- Persistent amber alerts for permissions and clarification questions.
 - Seven short, locally embedded CC0 sound cues; no audio download at runtime.
 - MQTT request IDs and display acknowledgements for troubleshooting.
 
 ```mermaid
 flowchart LR
-    Phone[Telegram on your phone] <-->|Tasks and actual approvals| Agent[Hermes gateway]
+    Phone[Your Hermes chat app] <-->|Tasks and actual approvals| Agent[Hermes gateway]
     Agent --> Status[Gateway status hook]
     Agent --> Requests[Approval observer plugin]
     Status --> Broker[Local MQTT broker]
@@ -38,8 +53,8 @@ git clone https://github.com/chaudharysk/hermes-sensecap-watcher.git hermes-watc
 cd hermes-watcher-public
 ```
 
-1. [Follow the complete tutorial](docs/TUTORIAL.md): broker, firmware, laptop,
-   Telegram, and an end-to-end check.
+1. [Follow the complete tutorial](docs/TUTORIAL.md): laptop, broker, firmware,
+   USB installation, and an end-to-end check in your preferred Hermes channel.
 2. [Read the MQTT protocol](docs/PROTOCOL.md) if integrating another sender.
 3. [Troubleshoot missing alerts](docs/TROUBLESHOOTING.md).
 4. [Review what is safe to publish](docs/PRIVACY.md).
@@ -59,6 +74,26 @@ cd hermes-watcher-public
 | `tools/` | Safe patch application and release checks |
 
 ## Compatibility and validation
+
+### Which chat apps work?
+
+The integration listens to Hermes events and uses MQTT to reach the Watcher;
+it does not connect to Telegram or any other chat service directly. Gateway
+activity works across channels that emit the same Hermes lifecycle events.
+Permission and question alerts depend on the human-input hooks available in
+your Hermes version and interface. See [Hermes hook documentation](https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks).
+
+| How you use Hermes | What this package observes |
+| --- | --- |
+| Supported gateway chat channels | Task activity, plus supported permission/question events |
+| Local Hermes CLI | Supported permission/question events through the plugin; the included gateway status hook does not run in CLI |
+| Another integration | Send the documented [MQTT messages](docs/PROTOCOL.md) |
+
+Telegram was used in the original setup. Every platform/version combination
+has not been individually tested; a platform must actually emit the required
+event for an alert to appear. No separate chat token goes into the Watcher.
+
+### Firmware and hardware
 
 The original working device setup was reported working by its owner. This public
 package sanitizes connection settings and adds installation materials; it has

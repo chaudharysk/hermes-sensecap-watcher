@@ -3,8 +3,8 @@
   "scope": "Reviewed source-only export; no device data or original Git history.",
   "files": {
     ".gitattributes": {
-      "sha256": "482d540b3a9da14f0aa933c5f2f36010fcd9b4299848aaafd1e57c757e7eb3a7",
-      "bytes": 65
+      "sha256": "10f5eecd2648e7bad885ff727360682f62df289d7248858afeafaec4fcaa3ff4",
+      "bytes": 78
     },
     ".github/workflows/checks.yml": {
       "sha256": "14ae3dbdc87e790a6cf49b3d7d24b550e07f41e2a2cb12f635a608d94927c890",
@@ -39,28 +39,28 @@
       "bytes": 1167
     },
     "docs/PRIVACY.md": {
-      "sha256": "dc2f0995a0ae53959358bd1f833bcafc441513374b3671ce50dbbce7af56b5ad",
-      "bytes": 2633
+      "sha256": "bed0614662afa7c876c7791e4a3d91c6dd24d7ea060bb3f267e8d8c8e0a974f4",
+      "bytes": 3061
     },
     "docs/PROTOCOL.md": {
-      "sha256": "ff7f62eca136237283581a2c12d4b320405f19de04d5c0a4bed2225dda4af23d",
-      "bytes": 4032
+      "sha256": "49f3d8a38eb06f752f9179f4084932ed9bd4311dd79387b9c59d22623bac8e62",
+      "bytes": 4056
     },
     "docs/PUBLISHING.md": {
-      "sha256": "c7238b150059ba799e4c3963ad2bec679993561fdb66bb7dbd82bbb04b2436c7",
-      "bytes": 2855
+      "sha256": "325eb2fcc83305bd8a2855208d9aeb876be930b8e9caf707d34eee2a063791f5",
+      "bytes": 2896
     },
     "docs/TROUBLESHOOTING.md": {
-      "sha256": "26ac2a32ebff73dcfa3dc02db8047878b630ecfef6685aa8e98ee29921f3dbe6",
-      "bytes": 4140
+      "sha256": "40887134e4bdfe73f168f0ea7bf7bf769b518c1d7ebae5b42b6b2277a214f089",
+      "bytes": 4146
     },
     "docs/TUTORIAL.md": {
-      "sha256": "e7e99161e22c4c7cc4bdbbe58bf6692c9f3c27598186e1d6fb8f9bbb22ab64b8",
-      "bytes": 10269
+      "sha256": "71e342196a35308dffba4cbed275167060efb2fb40fb2438a03a8cc63bd891a0",
+      "bytes": 17732
     },
     "docs/VALIDATION.md": {
-      "sha256": "217b04cdd61e29b2263bd2ab3aac14f01ac2ae969594027cc380c77952948470",
-      "bytes": 2795
+      "sha256": "df4155013b3ecb6856ca84f0495e6aba097b82b86ebe3d0454d86ee2785de34b",
+      "bytes": 3167
     },
     "firmware/integration.patch": {
       "sha256": "c80044b038aca0ecbefc6e3b0140ed07f98f05f0d90a63142888c0f031fc1ddd",
@@ -155,8 +155,8 @@
       "bytes": 5463
     },
     "firmware/overlay/main/view/view_hermes.c": {
-      "sha256": "1002ad56c5eb4cadf72ff6811d9d99b3e39768361a8f35d5c3350d64734a5bb6",
-      "bytes": 29487
+      "sha256": "3d18278c8fb0b45d05477dd1189c3000dd7c1d622553229bcc510a717f1be4f4",
+      "bytes": 29483
     },
     "firmware/overlay/main/view/view_hermes.h": {
       "sha256": "5c1eadacd3ce7e4e0a5522710546ed484043dbfab026917ec0b366e3348e3759",
@@ -183,8 +183,8 @@
       "bytes": 682
     },
     "laptop/README.md": {
-      "sha256": "f5120d8a6040d1171c9615db70a9e3af4907977e69b22dacb12813dc70e0a260",
-      "bytes": 1263
+      "sha256": "38f21ec336d278708e3c5880671aaa51a9f4845f5562ecbf20fbb36b44a6062a",
+      "bytes": 1262
     },
     "laptop/tests/test_diagnose.py": {
       "sha256": "c592baab39489f5c5662c86af6ff688793f55de1fff7bba66956153a6c59b4ca",
@@ -195,12 +195,12 @@
       "bytes": 18790
     },
     "laptop/watcher-approval/__init__.py": {
-      "sha256": "8bdfad42106080de995d1e33168e7895ae48e23fb3094977c62944e29137af94",
-      "bytes": 12857
+      "sha256": "b016d26bd8eafb9fac6c0d5a57d3cd81e57b77514c51994adfc0e1fb413a5ae1",
+      "bytes": 12855
     },
     "laptop/watcher-approval/plugin.yaml": {
-      "sha256": "42a133c0446b341786bb65547bdd332d3889e43794b8a53c14bdc8ed68ae0ca2",
-      "bytes": 141
+      "sha256": "c22a3df3133dcb713b2a84ae8124b731dd037e3413f6589e8a1474642958c418",
+      "bytes": 167
     },
     "laptop/watcher-status/handler.py": {
       "sha256": "43c9ea67f98ed6e074dd7a4f8f0ec13d0d456d94ff2fdef0e27f19fd6fc3de8a",
@@ -219,8 +219,8 @@
       "bytes": 979
     },
     "README.md": {
-      "sha256": "6141959579dc64d11019507703460b656dd432c3f513e6baed9c8fff03c9245d",
-      "bytes": 4581
+      "sha256": "4ded1fccd9fa8d856301d7a465187f58c199b648e2fb9666d5741b6f018329ea",
+      "bytes": 6436
     },
     "tests/test_release.py": {
       "sha256": "eecca65445dc44c2a4ded2837a62845f76588887f5f84a6b5ad1e833d39ba5cc",
@@ -235,8 +235,8 @@
       "bytes": 3226
     },
     "tools/check_release.py": {
-      "sha256": "6df93fa47d1806aab7b067fea6e3e0690162b6f6498e26f6ecf564d4b099a4b5",
-      "bytes": 3112
+      "sha256": "3b12cc0dc30472f36891a50fb1a486de276b7dbc00161657c0bacdab0cc2adfb",
+      "bytes": 3520
     },
     "tools/package_release.py": {
       "sha256": "c2e2f057da9c0b2d2da93cecd14b619e3fa56e11185b8f412dc50c7f1338261e",
@@ -245,6 +245,14 @@
     "tools/prepare_audio.py": {
       "sha256": "a304f0203a8a12393232480d1bd0c8ea6ab475044799e476d005bfeb2025d2d2",
       "bytes": 1157
+    },
+    "docs/images/watcher-done.jpg": {
+      "sha256": "d0ecfdffb42875dcb2b8f616dbf3159dbeadf13163549646adea948c88f3a3c0",
+      "bytes": 772175
+    },
+    "docs/images/watcher-working.jpg": {
+      "sha256": "8a4c3bb28662581ca88107cd9cf0e8776e01ab12a2d194b7a93d161e502504a9",
+      "bytes": 852776
     }
   }
 }

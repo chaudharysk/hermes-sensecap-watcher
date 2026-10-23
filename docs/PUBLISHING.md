@@ -12,7 +12,8 @@ The instructions below also apply when publishing your own reviewed fork.
 Suggested description:
 
 > Animated Hermes Agent companion for SenseCAP Watcher, with MQTT task states,
-> Telegram permission alerts, short sound cues, and a setup tutorial.
+> permission and question alerts across supported Hermes interfaces, short sound cues,
+> and a setup tutorial.
 
 Suggested topics: `hermes-agent`, `sensecap-watcher`, `esp32-s3`, `lvgl`, `mqtt`,
 `telegram`, `embedded`.

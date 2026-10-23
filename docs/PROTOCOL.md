@@ -27,11 +27,11 @@ on a state card. Details can be sent as `message` or `detail`.
 ## Requests and resolutions
 
 ```json
-{"type":"approval_required","kind":"approval","request_id":"example-1","message":"Review the pending command in Telegram"}
+{"type":"approval_required","kind":"approval","request_id":"example-1","message":"Review the pending command in Hermes"}
 ```
 
 ```json
-{"type":"approval_required","kind":"clarify","request_id":"example-2","message":"Choose an option in Telegram"}
+{"type":"approval_required","kind":"clarify","request_id":"example-2","message":"Choose an option in Hermes"}
 ```
 
 ```json
@@ -49,7 +49,7 @@ IDs must fit 95 UTF-8 bytes. The plugin hashes longer IDs consistently. Incoming
 MQTT payloads must fit 2047 bytes; fragmented messages are assembled and checked.
 Optional `approval_url`/`review_url` fields accept HTTP(S) URLs up to 319 bytes and
 can display a QR code. Only supply a real review page you control. This project
-does not implement such a page; Telegram needs no QR URL.
+does not implement such a page; answering in the original Hermes chat needs no QR URL.
 
 The plugin's native human-input hook receives Hermes-redacted prompt text and
 may forward a shortened version. Redaction does not guarantee a task description
@@ -65,7 +65,7 @@ the command. The gateway status hook sends only generic state names.
 The response has `type=pong`, the same ID, and `firmware=hermes-ui-1.2`.
 An applied structured request produces `type=approval_display`, its ID, and a
 `displayed` boolean. This confirms the LVGL request state was applied; it cannot
-inspect the physical LCD or prove the Telegram user saw the prompt.
+inspect the physical LCD or prove the user saw the prompt.
 
 Plugin health is emitted after ten seconds of worker-queue inactivity. It is
 not a persistent service monitor and may be absent during publish failures or
@@ -76,7 +76,7 @@ request/resolution counts, but no prompts or typed answers.
 
 Retained requests can reappear after reconnect. A plugin/gateway crash before
 publishing a resolution can leave a stale alert. Pending request state is held
-in memory on the laptop, not rebuilt from Telegram after restart. Verify the
+in memory on the laptop, not rebuilt from the chat service after restart. Verify the
 real request in Hermes before clearing a stale retained message. One retained
 topic cannot represent every pending request across independent gateways.
 

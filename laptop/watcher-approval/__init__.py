@@ -36,7 +36,7 @@ def _message(prompt, kind="approval"):
     text = " ".join(text.split())
     text = text.encode("utf-8")[:180].decode("utf-8", errors="ignore")
     if kind == "clarify":
-        return "Waiting for your choice: " + text if text else "Choose an option in Telegram"
+        return "Waiting for your choice: " + text if text else "Choose an option in Hermes"
     return "Waiting for permission: " + text if text else "Waiting for your permission in Hermes"
 
 

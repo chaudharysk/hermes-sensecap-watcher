@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = "release-manifest.json"
 IGNORED_DIRS = {".git", "__pycache__", ".venv", "dist"}
 BINARY_SUFFIXES = {".wav", ".ogg"}
+REVIEWED_PHOTOS = {"docs/images/watcher-working.jpg", "docs/images/watcher-done.jpg"}
 
 def content_findings(data):
     findings = []
@@ -51,7 +52,12 @@ def check(root=ROOT):
         data = path.read_bytes()
         if hashlib.sha256(data).hexdigest() != expected[name]["sha256"]:
             problems.append((name, "differs from reviewed snapshot"))
-        if path.suffix not in BINARY_SUFFIXES:
+        if name in REVIEWED_PHOTOS:
+            # These specific photos were visually reviewed and had EXIF/XMP/IPTC
+            # metadata removed. Their bytes are still pinned by the manifest.
+            if not data.startswith(b"\xff\xd8\xff"):
+                problems.append((name, "reviewed photo is not a JPEG"))
+        elif path.suffix not in BINARY_SUFFIXES:
             try: text = data.decode("utf-8")
             except UnicodeDecodeError:
                 problems.append((name, "unexpected binary content"))

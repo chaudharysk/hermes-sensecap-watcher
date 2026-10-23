@@ -38,6 +38,12 @@ hardware certification.
 
 ## Differences from the existing working setup
 
+The tutorial/README update includes two owner-supplied device photos with embedded
+metadata removed. The firmware and plugin fallback hints now refer to Hermes
+instead of Telegram. Hook registration and MQTT behavior are unchanged. The guide
+distinguishes shared gateway activity from CLI plugin events; it does not claim
+that every chat platform was tested on hardware.
+
 The firmware uses a local broker settings header instead of a fixed private
 address and supports broker credentials. The public tutorial offers a new
 reference broker deployment and generic status hook; the approval plugin and
